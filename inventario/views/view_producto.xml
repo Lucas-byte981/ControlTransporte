@@ -7,12 +7,10 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="price"/>
-                    <field name="currency_id"/>
-                    <field name="existencia"/>
-                    <field name="date_contract"/>
+
+                    <field name="date_elaboration"/>
+                    <field name="date_expiration"/>
                     <field name="categorias_id"/>
-                    <field name="active" />
                 </tree>
             </field>
         </record>
@@ -29,12 +27,9 @@
                             <field name="name" />
                         </group>
                         <group>
-                            <field name="price" />
-                            <field name="currency_id"/>
-                            <field name="existencia"/>
-                            <field name="date_contract" />
-                            <field name="categorias_id" />
-                            <field name="active" />
+                            <field name="date_elaboration" />
+                            <field name="date_expiration" />
+                            <field name="categorias_id"/>
                         </group>
                     </sheet>
                 </form>
@@ -74,6 +69,7 @@
                 </tree>
             </field>
         </record>
+
         <record model="ir.actions.act_window" id="inventario.producto_action_window">
             <field name="name">Productos</field>
             <field name="res_model">inventario.producto</field>
